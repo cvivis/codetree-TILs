@@ -28,6 +28,9 @@ public class Main {
         // 주어진 간선 정보 (x, y, z)
         // x -> y로 향하는 간선이 있으며, 가중치는 z 
         // Edge[] edges = new Edge[n+1][n+1];
+        // for(int i = 0; i <= n;i++){
+        //     Arrays.fill(graph[i],-1);
+        // }
 
         // 그래프를 인접행렬로 표현
         for(int i = 1; i <= m; i++) {
@@ -81,5 +84,8 @@ public class Main {
         // 시작점(n번 정점)으로부터 각 지점까지의 최단거리 값을 출력합니다.
         for(int i = 2; i <= n; i++)
             System.out.println(dist[i]);
+            if(dist[i] == (int)1e9){
+                System.out.println(-1);
+            }
     }
 }
