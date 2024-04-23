@@ -83,9 +83,11 @@ public class Main {
 
         // 시작점(n번 정점)으로부터 각 지점까지의 최단거리 값을 출력합니다.
         for(int i = 2; i <= n; i++){
-            System.out.println(dist[i]);
             if(dist[i] == (int)1e9){
                 System.out.println(-1);
+            }
+            else{
+                System.out.println(dist[i]);
             }
         }
     }
