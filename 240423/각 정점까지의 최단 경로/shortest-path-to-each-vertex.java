@@ -100,11 +100,8 @@ public class Main {
                 dist[i] = -1;
             }
         }
-        System.out.println(dist[start]);
         for(int i = 1; i < dist.length;i++){
-            if(i != start){
                 System.out.println(dist[i]);
-            }
         }
     }
 }
