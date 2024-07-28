@@ -16,8 +16,10 @@ public class Main {
     static int N;
     public static void main(String[] args) throws IOException {
         tokens = new StringTokenizer(br.readLine());
-        for(int i = 0 ; i < 10;i = i + 2){
-            System.out.println(tokens.nextToken());
+        for(int i = 0 ; i < 10;i = i++){
+            if(i % 2 == 0){
+                System.out.println(tokens.nextToken());
+            }
         }
     }
 }
