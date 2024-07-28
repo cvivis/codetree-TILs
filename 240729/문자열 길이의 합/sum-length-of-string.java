@@ -15,15 +15,11 @@ public class Main {
     static StringBuilder output = new StringBuilder();
     static int N;
     public static void main(String[] args) throws IOException {
-//        List<String> list = new ArrayList<>();
-        N = Integer.parseInt(br.readLine());
-        int cnt = 0;
-        int len = 0;
-        for(int i = 0; i < N;i++){
-            String str = br.readLine();
-            len += str.length();
-            if(str.charAt(0) == 'a')cnt++;
+        tokens = new StringTokenizer(br.readLine());
+        for(int i = 0 ; i < 10;i = i++){
+            if(i % 2 == 0){
+                System.out.println(tokens.nextToken());
+            }
         }
-        System.out.println(len + " "+cnt);
     }
 }
