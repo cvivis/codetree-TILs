@@ -20,7 +20,7 @@ public class Main {
         for(int i = 3; i <= N;i++){
             dp[i] = (dp[i-1] * 2 + dp[i-2] * 3) % mod;
             for(int j = 3; j <= i; j++){
-                dp[i] = (dp[i]+2) % mod;
+                dp[i] = (dp[i] + dp[i-j] * 2) % mod;
             }
         }
         System.out.println(dp[N]);
