@@ -9,19 +9,24 @@ public class Main {
     static StringTokenizer tokens;
     static StringBuilder output = new StringBuilder();
     static int N;
-    static int mod = 1000000007;
+    static int MOD = 1000000007;
 
     public static void main(String[] args) throws IOException {
         N = Integer.parseInt(br.readLine());
-        int[] dp = new int[1000];
+        long[] dp = new long[1001];
         dp[0] = 1;
         dp[1] = 2;
         dp[2] = 7;
-        for(int i = 3; i <= N;i++){
-            dp[i] = (dp[i-1] * 2 + dp[i-2] * 3) % mod;
-            for(int j = 3; j <= i; j++){
-                dp[i] = (dp[i] + dp[i-j] * 2) % mod;
-            }
+        // for(int i = 3; i <= N;i++){
+        //     dp[i] = (dp[i-1] * 2 + dp[i-2] * 3) % mod;
+        //     for(int j = 3; j <= i; j++){
+        //         dp[i] = (dp[i] + dp[i-j] * 2) % mod;
+        //     }
+        // }
+        for(int i = 2; i <= N; i++) {
+            dp[i] = (dp[i - 1] * 2 + dp[i - 2] * 3) % MOD;
+            for(int j = i - 3; j >= 0; j--)
+                dp[i] = (dp[i] + dp[j] * 2) % MOD;
         }
         System.out.println(dp[N]);
     }
