@@ -9,7 +9,7 @@ public class Main {
     static StringTokenizer tokens;
     static StringBuilder output = new StringBuilder();
     static int N;
-    static int MOD = 1000000007;
+    static int mod = 1000000007;
 
     public static void main(String[] args) throws IOException {
         N = Integer.parseInt(br.readLine());
