@@ -24,7 +24,7 @@ public class Main {
             }
         }
         dp[1][N] = input[1][N];
-        for(int i = N; i >= 1;i--){
+        for(int i = 1; i <= N;i++){
             dp[i][N] = dp[i-1][N] + input[i][N];
         }
         for(int i = N-1; i >= 1;i--){
